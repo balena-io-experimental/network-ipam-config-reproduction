@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  one:
+    image: alpine:latest
+    command: sleep infinity
+    stop_signal: SIGKILL
+  two:
+    image: alpine:latest
+    command: sleep infinity
+    stop_signal: SIGKILL
