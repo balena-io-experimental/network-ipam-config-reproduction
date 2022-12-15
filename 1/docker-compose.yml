@@ -3,7 +3,13 @@ version: '2.3'
 services:
   one:
     image: alpine:latest
-    command: sh -c "echo new && sleep infinity"
+    command: sleep infinity
+    stop_signal: SIGKILL
+    networks:
+      - default
+  two:
+    image: alpine:latest
+    command: sh -c "echo two && sleep infinity"
     stop_signal: SIGKILL
     networks:
       - default
